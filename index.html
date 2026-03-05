@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tree Diagram 1.0.1</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="main-menu-btn" onmousedown="toggleSysPanel()" data-i18n="sysMenuBtn">⚙ Settings & System</button>
+        <div id="workspace">
+            <canvas id="canvas-overlay"></canvas>
+            <div id="nodes-container"></div>
+        </div>
+        <div id="sys-panel" class="floating-panel" style="top: 60px; left: 15px; display: none;">
+            <div class="panel-header" id="sys-header" data-i18n="sysPanelTitle">System Panel (Drag)</div>
+            <div class="panel-body">
+                <div class="panel-group">
+                    <h4 data-i18n="sysSettingsHeader">System Settings</h4>
+                    
+                    <label data-i18n="languageLabel">Language / Ngôn ngữ / 语言:</label>
+                    <select id="lang-select" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="zh">中文 (Chinese)</option>
+                    </select>
+                    
+                    <button class="sys-btn" onmousedown="event.stopPropagation(); toggleTheme()" data-i18n="toggleTheme">Toggle Light/Dark Mode</button>
+                    
+                    <label data-i18n="gridSizeLabel">Grid Size (1fr = ... Pixel):</label>
+                    <input type="number" id="sys-fr" value="40" step="1" onchange="updateSysFr()">
+                    
+                    <div class="grid-2" style="margin-top: 10px;">
+                        <button class="sys-btn" onmousedown="event.stopPropagation(); triggerSave();" data-i18n="saveDiagram">Save Diagram (.tdbs)</button>
+                        <button class="sys-btn" onmousedown="event.stopPropagation(); initLoad();" data-i18n="loadDiagram">Load Diagram (.tdbs)</button>
+                    </div>
+                    <button class="sys-btn export" onmousedown="event.stopPropagation(); openExportModal();" data-i18n="exportPngBtn">Export PNG</button>
+                </div>
+                <button onmousedown="event.stopPropagation(); closeSysPanel();" style="width:100%; background:#d9534f; color:white; border:none; padding:8px; border-radius:4px; cursor:pointer;" data-i18n="closeSysPanel">Close System Panel</button>
+            </div>
+        </div>
+        <div id="node-panel" class="floating-panel" style="top: 60px; right: 15px; display: none;">
+            <div class="panel-header" id="node-header" data-i18n="nodePanelTitle">Node Formatting (Drag)</div>
+            <div class="panel-body">
+                <div class="panel-group">
+                    <label data-i18n="bgColor">Background Color:</label>
+                    <input type="color" id="set-bg" oninput="liveUpdate()">
+                    <label data-i18n="strokeColor">Border Color:</label>
+                    <input type="color" id="set-stroke" oninput="liveUpdate()">
+                    <label data-i18n="textColor">Text Color:</label>
+                    <input type="color" id="set-color" oninput="liveUpdate()">
+                </div>
+                <div class="panel-group">
+                    <label data-i18n="widthLabel">Width (Unit: fr):</label>
+                    <input type="number" id="set-width" step="0.5" onchange="liveUpdate()">
+                    <button class="key-btn" onmousedown="event.stopPropagation(); applySizeTo('col')" data-i18n="syncWidth">Sync Width for Current Column</button>
+                    
+                    <label data-i18n="heightLabel">Height (Unit: fr):</label>
+                    <input type="number" id="set-height" step="0.5" onchange="liveUpdate()">
+                    <button class="key-btn" onmousedown="event.stopPropagation(); applySizeTo('row')" data-i18n="syncHeight">Sync Height for Current Row</button>
+                </div>
+                <div class="panel-group">
+                    <label data-i18n="gapLabel">Gap to Children (Unit: fr):</label>
+                    <div class="grid-2">
+                        <div><label data-i18n="left">Left</label><input type="number" id="set-gap-l" step="0.5" oninput="liveUpdate()"></div>
+                        <div><label data-i18n="right">Right</label><input type="number" id="set-gap-r" step="0.5" oninput="liveUpdate()"></div>
+                        <div><label data-i18n="top">Top</label><input type="number" id="set-gap-t" step="0.5" oninput="liveUpdate()"></div>
+                        <div><label data-i18n="bottom">Bottom</label><input type="number" id="set-gap-b" step="0.5" oninput="liveUpdate()"></div>
+                    </div>
+                </div>
+                <div class="panel-group" style="border:none;">
+                    <label data-i18n="noteHeightLabel">Note Height (Unit: fr):</label>
+                    <input type="number" id="set-note-height" step="0.5" oninput="liveUpdate()">
+                </div>
+                <button onmousedown="event.stopPropagation(); closeNodePanel();" style="width:100%; background:#d9534f; color:white; border:none; padding:8px; border-radius:4px; cursor:pointer;" data-i18n="closeNodePanel">Close Node Panel</button>
+            </div>
+        </div>
+        <div id="custom-modal-overlay">
+            <div id="custom-modal-box">
+                <div id="custom-modal-msg"></div>
+                <div id="export-inputs" style="display:none; margin-bottom: 20px;">
+                    <label id="export-margin-label" style="display:block; margin-bottom:5px;">Outer Margin (Unit: fr):</label>
+                    <input type="number" id="export-margin" value="0.4" step="0.1" style="width:100%; padding:8px; box-sizing:border-box; background:transparent; color:var(--text-color); border:1px solid var(--panel-border); border-radius:4px;">
+                </div>
+                <div id="custom-modal-btns"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
