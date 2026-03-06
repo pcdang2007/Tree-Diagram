@@ -252,6 +252,7 @@ function setupDrag(panelId, headerId) {
     const header = document.getElementById(headerId);
     if (!panel || !header) return;
     header.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return;
         activeDragPanel = panel;
         dragOffsetX = e.clientX - panel.getBoundingClientRect().left;
         dragOffsetY = e.clientY - panel.getBoundingClientRect().top;
@@ -395,6 +396,7 @@ function handleWheel(e) {
 }
 function handleMouseDown(e) {
     if (e.target.id === 'workspace' || e.target.id === 'canvas-overlay') {
+        if (e.button !== 0) return;
         isPanning = true;
         startPanX = e.clientX - cameraX;
         startPanY = e.clientY - cameraY;
@@ -1001,26 +1003,26 @@ function render() {
             let hPx = node.height * frSize;
             let notePx = node.settings.noteHeight * frSize;
             div.innerHTML = `
-                ${isRoot ? '' : `<div class="del-btn" onmousedown="event.stopPropagation(); triggerDelete(${node.id});">-</div>`}
+                ${isRoot ? '' : `<div class="del-btn" onmousedown="if(event.button !== 0) return; event.stopPropagation(); triggerDelete(${node.id});">-</div>`}
                 <div class="icon-bar" onmousedown="event.stopPropagation()">
-                    <div class="icon-btn" title="${t('settingsTooltip')}" onmousedown="event.stopPropagation(); openSettings(${node.id});">S</div>
-                    <div class="icon-btn" title="${t('noteTooltip')}" onmousedown="event.stopPropagation(); toggleNote(${node.id});">N</div>
+                    <div class="icon-btn" title="${t('settingsTooltip')}" onmousedown="if(event.button !== 0) return; event.stopPropagation(); openSettings(${node.id});">S</div>
+                    <div class="icon-btn" title="${t('noteTooltip')}" onmousedown="if(event.button !== 0) return; event.stopPropagation(); toggleNote(${node.id});">N</div>
                     ${isRoot ? '' : `
-                    <div class="icon-btn" title="${t('rotateTooltip')}" onmousedown="event.stopPropagation(); changeDirection(${node.id});">R</div>
-                    <div class="icon-btn" title="${t('moveUpTooltip')}" onmousedown="event.stopPropagation(); moveSibling(${node.id}, -1);">↑</div>
-                    <div class="icon-btn" title="${t('moveDownTooltip')}" onmousedown="event.stopPropagation(); moveSibling(${node.id}, 1);">↓</div>
+                    <div class="icon-btn" title="${t('rotateTooltip')}" onmousedown="if(event.button !== 0) return; event.stopPropagation(); changeDirection(${node.id});">R</div>
+                    <div class="icon-btn" title="${t('moveUpTooltip')}" onmousedown="if(event.button !== 0) return; event.stopPropagation(); moveSibling(${node.id}, -1);">↑</div>
+                    <div class="icon-btn" title="${t('moveDownTooltip')}" onmousedown="if(event.button !== 0) return; event.stopPropagation(); moveSibling(${node.id}, 1);">↓</div>
                     `}
                 </div>
-                ${forbiddenDir !== 'top' ? `<div class="add-btn add-top" onmousedown="event.stopPropagation(); handleAdd(${node.id}, 'top');">+</div>` : ''}
-                ${forbiddenDir !== 'bottom' ? `<div class="add-btn add-bottom" onmousedown="event.stopPropagation(); handleAdd(${node.id}, 'bottom');">+</div>` : ''}
-                ${forbiddenDir !== 'left' ? `<div class="add-btn add-left" onmousedown="event.stopPropagation(); handleAdd(${node.id}, 'left');">+</div>` : ''}
-                ${forbiddenDir !== 'right' ? `<div class="add-btn add-right" onmousedown="event.stopPropagation(); handleAdd(${node.id}, 'right');">+</div>` : ''}
+                ${forbiddenDir !== 'top' ? `<div class="add-btn add-top" onmousedown="if(event.button !== 0) return; event.stopPropagation(); handleAdd(${node.id}, 'top');">+</div>` : ''}
+                ${forbiddenDir !== 'bottom' ? `<div class="add-btn add-bottom" onmousedown="if(event.button !== 0) return; event.stopPropagation(); handleAdd(${node.id}, 'bottom');">+</div>` : ''}
+                ${forbiddenDir !== 'left' ? `<div class="add-btn add-left" onmousedown="if(event.button !== 0) return; event.stopPropagation(); handleAdd(${node.id}, 'left');">+</div>` : ''}
+                ${forbiddenDir !== 'right' ? `<div class="add-btn add-right" onmousedown="if(event.button !== 0) return; event.stopPropagation(); handleAdd(${node.id}, 'right');">+</div>` : ''}
                 <div class="node-main" style="width: ${wPx}px; height: ${hPx}px; background-color: ${node.settings.bg}; border: 2px solid ${node.settings.stroke}; color: ${node.settings.color}; border-radius: 4px;">
-                    <div class="node-content" contenteditable="true" onmousedown="event.stopPropagation()" oninput="updateContent(${node.id}, this.innerText)">${node.content}</div>
+                    <div class="node-content" contenteditable="true" onmousedown="if(event.button !== 0) { event.preventDefault(); } event.stopPropagation();" oninput="updateContent(${node.id}, this.innerText)">${node.content}</div>
                 </div>
                 ${node.note.show ? `
                 <div class="node-note" style="width: ${wPx}px; height: ${notePx}px; background-color: ${node.settings.bg}; border: 2px solid ${node.settings.stroke}; border-top: 1px dashed ${node.settings.stroke}; color: ${node.settings.color}; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; margin-top: -2px;">
-                    <div class="note-content" contenteditable="true" onmousedown="event.stopPropagation()" oninput="updateNote(${node.id}, this.innerText)">${node.note.content}</div>
+                    <div class="note-content" contenteditable="true" onmousedown="if(event.button !== 0) { event.preventDefault(); } event.stopPropagation();" oninput="updateNote(${node.id}, this.innerText)">${node.note.content}</div>
                 </div>
                 ` : ''}
             `;
