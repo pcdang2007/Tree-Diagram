@@ -3,7 +3,7 @@ const i18n = {
         sysMenuBtn: "⚙ Settings & System",
         sysPanelTitle: "System Panel (Drag)",
         sysSettingsHeader: "System Settings",
-        languageLabel: "Language / Ngôn ngữ / 语言:",
+        languageLabel: "Language / Ngôn ngữ / 语言 / Français / Русский:",
         toggleTheme: "Toggle Light/Dark Mode",
         gridSizeLabel: "Grid Size (1fr = ... Pixel):",
         saveDiagram: "Save Diagram (.tdbs)",
@@ -41,7 +41,7 @@ const i18n = {
         sysMenuBtn: "⚙ Cài đặt & Hệ thống",
         sysPanelTitle: "Bảng Hệ Thống (Kéo)",
         sysSettingsHeader: "Cài đặt Hệ thống",
-        languageLabel: "Language / Ngôn ngữ / 语言:",
+        languageLabel: "Language / Ngôn ngữ / 语言 / Français / Русский:",
         toggleTheme: "Đổi Giao Diện Sáng/Tối",
         gridSizeLabel: "Kích thước lưới (1fr = ... Pixel):",
         saveDiagram: "Lưu Sơ Đồ (.tdbs)",
@@ -79,7 +79,7 @@ const i18n = {
         sysMenuBtn: "⚙ 设置与系统",
         sysPanelTitle: "系统面板 (拖动)",
         sysSettingsHeader: "系统设置",
-        languageLabel: "Language / Ngôn ngữ / 语言:",
+        languageLabel: "Language / Ngôn ngữ / 语言 / Français / Русский:",
         toggleTheme: "切换亮/暗模式",
         gridSizeLabel: "网格大小 (1fr = ... 像素):",
         saveDiagram: "保存图表 (.tdbs)",
@@ -112,6 +112,82 @@ const i18n = {
         loadFail: "加载文件失败！文件可能已损坏。",
         dirOccupied: "该方向已有节点。你想做什么？",
         deleteConfirm: "您确定要删除此节点及其所有分支吗？"
+    },
+    fr: {
+        sysMenuBtn: "⚙ Paramètres & Système",
+        sysPanelTitle: "Panneau Système (Glisser)",
+        sysSettingsHeader: "Paramètres Système",
+        languageLabel: "Language / Ngôn ngữ / 语言 / Français / Русский:",
+        toggleTheme: "Basculer le mode Clair/Sombre",
+        gridSizeLabel: "Taille de la grille (1fr = ... Pixel):",
+        saveDiagram: "Enregistrer le diagramme (.tdbs)",
+        loadDiagram: "Charger le diagramme (.tdbs)",
+        exportPngBtn: "Exporter en PNG",
+        closeSysPanel: "Fermer le panneau système",
+        nodePanelTitle: "Formatage du nœud (Glisser)",
+        bgColor: "Couleur de fond:",
+        strokeColor: "Couleur de bordure:",
+        textColor: "Couleur du texte:",
+        widthLabel: "Largeur (Unité: fr):",
+        syncWidth: "Synchroniser la largeur pour la colonne",
+        heightLabel: "Hauteur (Unité: fr):",
+        syncHeight: "Synchroniser la hauteur pour la ligne",
+        gapLabel: "Écart avec les enfants (Unité: fr):",
+        left: "Gauche", right: "Droite", top: "Haut", bottom: "Bas",
+        noteHeightLabel: "Hauteur de la note (Unité: fr):",
+        closeNodePanel: "Fermer le panneau du nœud",
+        exportMargin: "Marge extérieure (Unité: fr):",
+        downloadImage: "Télécharger l'image",
+        close: "Fermer", cancel: "Annuler", okBtn: "OK", deleteBtn: "Supprimer",
+        insertMiddle: "Insérer au milieu",
+        addParallel: "Ajouter une branche parallèle",
+        rootNode: "Racine", defaultNode: "Nœud",
+        settingsTooltip: "Paramètres", noteTooltip: "Note",
+        rotateTooltip: "Changer de direction", moveUpTooltip: "Déplacer vers le haut", moveDownTooltip: "Déplacer vers le bas",
+        exportModalTitle: "Paramètres d'exportation PNG",
+        saveSuccess: "Diagramme enregistré sous .tdbs avec succès !",
+        loadSuccess: "Diagramme chargé depuis le fichier avec succès !",
+        loadFail: "Échec du chargement du fichier ! Il pourrait être corrompu.",
+        dirOccupied: "Direction occupée. Que voulez-vous faire ?",
+        deleteConfirm: "Êtes-vous sûr de vouloir supprimer ce nœud et toutes ses branches ?"
+    },
+    ru: {
+        sysMenuBtn: "⚙ Настройки и Система",
+        sysPanelTitle: "Системная панель (Перетащить)",
+        sysSettingsHeader: "Системные настройки",
+        languageLabel: "Language / Ngôn ngữ / 语言 / Français / Русский:",
+        toggleTheme: "Переключить светлую/темную тему",
+        gridSizeLabel: "Размер сетки (1fr = ... Пикселей):",
+        saveDiagram: "Сохранить схему (.tdbs)",
+        loadDiagram: "Загрузить схему (.tdbs)",
+        exportPngBtn: "Экспорт в PNG",
+        closeSysPanel: "Закрыть системную панель",
+        nodePanelTitle: "Форматирование узла (Перетащить)",
+        bgColor: "Цвет фона:",
+        strokeColor: "Цвет границы:",
+        textColor: "Цвет текста:",
+        widthLabel: "Ширина (Единица: fr):",
+        syncWidth: "Синхронизировать ширину для колонки",
+        heightLabel: "Высота (Единица: fr):",
+        syncHeight: "Синхронизировать высоту для строки",
+        gapLabel: "Отступ до дочерних узлов (Единица: fr):",
+        left: "Влево", right: "Вправо", top: "Вверх", bottom: "Вниз",
+        noteHeightLabel: "Высота заметки (Единица: fr):",
+        closeNodePanel: "Закрыть панель узла",
+        exportMargin: "Внешний отступ (Единица: fr):",
+        downloadImage: "Скачать изображение",
+        close: "Закрыть", cancel: "Отмена", okBtn: "ОК", deleteBtn: "Удалить",
+        insertMiddle: "Вставить посередине",
+        addParallel: "Добавить параллельную ветвь",
+        rootNode: "Корень", defaultNode: "Узел",
+        settingsTooltip: "Настройки", noteTooltip: "Заметка",
+        rotateTooltip: "Изменить направление", moveUpTooltip: "Переместить вверх", moveDownTooltip: "Переместить вниз",
+        exportModalTitle: "Настройки экспорта PNG",
+        saveSuccess: "Схема успешно сохранена в файл .tdbs!",
+        loadSuccess: "Схема успешно загружена из файла!",
+        loadFail: "Не удалось загрузить файл! Возможно, он поврежден.",
+        dirOccupied: "Направление занято. Что вы хотите сделать?",
+        deleteConfirm: "Вы уверены, что хотите удалить этот узел и все его ветви?"
     }
 };
 let currentLang = 'en';
@@ -136,13 +212,13 @@ function changeLanguage(lang) {
     render();
 }
 let isDarkMode = true;
-let frSize = 40; 
+let frSize = 40;
 let nodes = [];
 let edges = [];
 let currentNodeId = null;
 let idCounter = 1;
-const defaultWidthFr = 3;  
-const defaultHeightFr = 1; 
+const defaultWidthFr = 3;
+const defaultHeightFr = 1;
 const defaultNoteHFr = 1;
 const defaultGapFr = 1;
 const siblingGapFr = 0.5;
@@ -158,14 +234,14 @@ fileInput.type = 'file';
 fileInput.accept = '.tdbs';
 fileInput.style.display = 'none';
 document.body.appendChild(fileInput);
-fileInput.addEventListener('change', function(e) {
+fileInput.addEventListener('change', function (e) {
     let file = e.target.files[0];
     if (!file) return;
     let reader = new FileReader();
-    reader.onload = function(event) {
+    reader.onload = function (event) {
         triggerLoad(event.target.result);
     };
-    reader.onerror = function() {
+    reader.onerror = function () {
         showAlert(t('loadFail'));
     };
     reader.readAsText(file);
@@ -258,10 +334,10 @@ function showModal(msg, buttons, isExport = false) {
     document.getElementById('custom-modal-overlay').style.display = 'flex';
 }
 function showAlert(msg) {
-    showModal(msg, [{text: t('okBtn'), color: '#007bff'}]);
+    showModal(msg, [{ text: t('okBtn'), color: '#007bff' }]);
 }
 function openExportModal() {
-    showModal(t('exportModalTitle'), [{text: t('close'), color: '#6c757d'}], true);
+    showModal(t('exportModalTitle'), [{ text: t('close'), color: '#6c757d' }], true);
 }
 function init() {
     cameraX = window.innerWidth / 2;
@@ -269,7 +345,7 @@ function init() {
     document.documentElement.style.setProperty('--cam-x', cameraX + 'px');
     document.documentElement.style.setProperty('--cam-y', cameraY + 'px');
     document.documentElement.style.setProperty('--fr-size', frSize + 'px');
-    changeLanguage('en'); 
+    changeLanguage('en');
     resizeCanvas();
     if (nodes.length === 0) {
         createNode(0, 0, t('rootNode'), null, null);
@@ -297,7 +373,7 @@ function handleWheel(e) {
     }
     e.preventDefault();
     let oldFrSize = frSize;
-    let zoomSpeed = Math.max(1, Math.abs(e.deltaY) / 50); 
+    let zoomSpeed = Math.max(1, Math.abs(e.deltaY) / 50);
     if (e.deltaY > 0) frSize = Math.max(10, frSize - zoomSpeed);
     else frSize = Math.min(200, frSize + zoomSpeed);
     if (oldFrSize !== frSize) {
@@ -322,7 +398,7 @@ function handleMouseDown(e) {
         isPanning = true;
         startPanX = e.clientX - cameraX;
         startPanY = e.clientY - cameraY;
-        document.body.classList.add('no-transition'); 
+        document.body.classList.add('no-transition');
     }
 }
 function handleMouseMove(e) {
@@ -339,7 +415,7 @@ function handleMouseMove(e) {
     document.documentElement.style.setProperty('--cam-y', cameraY + 'px');
     document.querySelectorAll('.node').forEach(el => {
         let n = nodes.find(x => x.id == el.dataset.id);
-        if(n) {
+        if (n) {
             el.style.left = (n.x + cameraX) + 'px';
             el.style.top = (n.y + cameraY) + 'px';
         }
@@ -354,7 +430,7 @@ function handleMouseUp() {
 function getForbiddenDir(nodeId) {
     let incomingEdge = edges.find(e => e.to === nodeId);
     if (!incomingEdge) return null;
-    switch(incomingEdge.dir) {
+    switch (incomingEdge.dir) {
         case 'right': return 'left';
         case 'left': return 'right';
         case 'bottom': return 'top';
@@ -364,14 +440,14 @@ function getForbiddenDir(nodeId) {
 function getRowNodes(startId) {
     let row = new Set();
     let q = [startId];
-    while(q.length) {
+    while (q.length) {
         let curr = q.shift();
-        if(row.has(curr)) continue;
+        if (row.has(curr)) continue;
         row.add(curr);
         edges.forEach(e => {
-            if((e.from === curr || e.to === curr) && (e.dir === 'left' || e.dir === 'right')) {
+            if ((e.from === curr || e.to === curr) && (e.dir === 'left' || e.dir === 'right')) {
                 let neighbor = e.from === curr ? e.to : e.from;
-                if(!row.has(neighbor)) q.push(neighbor);
+                if (!row.has(neighbor)) q.push(neighbor);
             }
         });
     }
@@ -380,14 +456,14 @@ function getRowNodes(startId) {
 function getColNodes(startId) {
     let col = new Set();
     let q = [startId];
-    while(q.length) {
+    while (q.length) {
         let curr = q.shift();
-        if(col.has(curr)) continue;
+        if (col.has(curr)) continue;
         col.add(curr);
         edges.forEach(e => {
-            if((e.from === curr || e.to === curr) && (e.dir === 'top' || e.dir === 'bottom')) {
+            if ((e.from === curr || e.to === curr) && (e.dir === 'top' || e.dir === 'bottom')) {
                 let neighbor = e.from === curr ? e.to : e.from;
-                if(!col.has(neighbor)) q.push(neighbor);
+                if (!col.has(neighbor)) q.push(neighbor);
             }
         });
     }
@@ -398,17 +474,17 @@ function createNode(x, y, content, parentId, direction) {
     let h = defaultHeightFr;
     if (parentId !== null) {
         const parent = nodes.find(n => n.id === parentId);
-        if (direction === 'left' || direction === 'right') h = parent.height; 
-        if (direction === 'top' || direction === 'bottom') w = parent.width; 
+        if (direction === 'left' || direction === 'right') h = parent.height;
+        if (direction === 'top' || direction === 'bottom') w = parent.width;
     }
     const newNode = {
         id: idCounter++,
-        x: x, 
+        x: x,
         y: y,
         width: w,
         height: h,
         content: content,
-        isCustomContent: false, 
+        isCustomContent: false,
         gaps: { top: defaultGapFr, bottom: defaultGapFr, left: defaultGapFr, right: defaultGapFr },
         settings: { ...getDefaultColors(), noteHeight: defaultNoteHFr, isCustomColor: false },
         note: { show: false, content: '' }
@@ -425,13 +501,13 @@ function createNode(x, y, content, parentId, direction) {
 function executeAdd(parentId, dir, mode) {
     let w = defaultWidthFr, h = defaultHeightFr;
     const parent = nodes.find(n => n.id === parentId);
-    if (dir === 'left' || dir === 'right') h = parent.height; 
-    if (dir === 'top' || dir === 'bottom') w = parent.width; 
+    if (dir === 'left' || dir === 'right') h = parent.height;
+    if (dir === 'top' || dir === 'bottom') w = parent.width;
     const newNode = {
         id: idCounter++,
-        x: parent.x, y: parent.y, 
+        x: parent.x, y: parent.y,
         width: w, height: h, content: t('defaultNode'),
-        isCustomContent: false, 
+        isCustomContent: false,
         gaps: { top: defaultGapFr, bottom: defaultGapFr, left: defaultGapFr, right: defaultGapFr },
         settings: { ...getDefaultColors(), noteHeight: defaultNoteHFr, isCustomColor: false },
         note: { show: false, content: '' }
@@ -450,9 +526,9 @@ function handleAdd(parentId, dir) {
     let existingEdges = edges.filter(e => e.from === parentId && e.dir === dir);
     if (existingEdges.length > 0) {
         showModal(t('dirOccupied'), [
-            {text: t('insertMiddle'), color: '#28a745', action: () => executeAdd(parentId, dir, 'insert')},
-            {text: t('addParallel'), color: '#17a2b8', action: () => executeAdd(parentId, dir, 'parallel')},
-            {text: t('cancel'), color: '#6c757d'}
+            { text: t('insertMiddle'), color: '#28a745', action: () => executeAdd(parentId, dir, 'insert') },
+            { text: t('addParallel'), color: '#17a2b8', action: () => executeAdd(parentId, dir, 'parallel') },
+            { text: t('cancel'), color: '#6c757d' }
         ]);
         return;
     }
@@ -467,14 +543,14 @@ function changeDirection(id) {
     let delta = 1;
     let nextIdx = (idx + delta) % 4;
     if (dirs[nextIdx] === forbiddenDir) {
-        delta = 2; 
+        delta = 2;
         nextIdx = (idx + delta) % 4;
     }
     edge.dir = dirs[nextIdx];
     function rotateSubTree(parentId, rotationDelta) {
         edges.filter(e => e.from === parentId).forEach(cEdge => {
             let currIdx = dirs.indexOf(cEdge.dir);
-            cEdge.dir = dirs[(currIdx + rotationDelta) % 4]; 
+            cEdge.dir = dirs[(currIdx + rotationDelta) % 4];
             rotateSubTree(cEdge.to, rotationDelta);
         });
     }
@@ -502,33 +578,35 @@ function moveSibling(id, delta) {
 }
 function triggerDelete(id) {
     showModal(t('deleteConfirm'), [
-        {text: t('deleteBtn'), color: '#d9534f', action: () => {
-            let toDelete = new Set();
-            let queue = [id];
-            while(queue.length > 0) {
-                let curr = queue.shift();
-                toDelete.add(curr);
-                edges.forEach(e => { if (e.from === curr) queue.push(e.to); });
+        {
+            text: t('deleteBtn'), color: '#d9534f', action: () => {
+                let toDelete = new Set();
+                let queue = [id];
+                while (queue.length > 0) {
+                    let curr = queue.shift();
+                    toDelete.add(curr);
+                    edges.forEach(e => { if (e.from === curr) queue.push(e.to); });
+                }
+                nodes = nodes.filter(n => !toDelete.has(n.id));
+                edges = edges.filter(e => !toDelete.has(e.from) && !toDelete.has(e.to));
+                if (currentNodeId && toDelete.has(currentNodeId)) closeNodePanel();
+                recalculatePositions();
+                render();
+                animateEdges();
             }
-            nodes = nodes.filter(n => !toDelete.has(n.id));
-            edges = edges.filter(e => !toDelete.has(e.from) && !toDelete.has(e.to));
-            if (currentNodeId && toDelete.has(currentNodeId)) closeNodePanel();
-            recalculatePositions();
-            render();
-            animateEdges();
-        }},
-        {text: t('cancel'), color: '#6c757d'}
+        },
+        { text: t('cancel'), color: '#6c757d' }
     ]);
 }
 function calcTreeBounds(nodeId) {
     let node = nodes.find(n => n.id === nodeId);
     let w = node.width * frSize;
-    let h = node.height * frSize; 
+    let h = node.height * frSize;
     let noteH = node.note.show ? node.settings.noteHeight * frSize : 0;
     let sGap = siblingGapFr * frSize;
     node.dirs = { top: [], bottom: [], left: [], right: [] };
     edges.filter(e => e.from === nodeId).forEach(e => node.dirs[e.dir].push(e.to));
-    let bounds = { top: -h/2, bottom: h/2 + noteH, left: -w/2, right: w/2 };
+    let bounds = { top: -h / 2, bottom: h / 2 + noteH, left: -w / 2, right: w / 2 };
     let childrenData = {};
     ['right', 'left', 'bottom', 'top'].forEach(dir => {
         childrenData[dir] = node.dirs[dir].map(cid => {
@@ -538,16 +616,16 @@ function calcTreeBounds(nodeId) {
     });
     if (childrenData.right.length > 0) {
         let relYs = [0];
-        for(let i=1; i<childrenData.right.length; i++) {
-            let prev = childrenData.right[i-1];
+        for (let i = 1; i < childrenData.right.length; i++) {
+            let prev = childrenData.right[i - 1];
             let curr = childrenData.right[i];
-            relYs.push(relYs[i-1] + prev.bottom + sGap - curr.top);
+            relYs.push(relYs[i - 1] + prev.bottom + sGap - curr.top);
         }
         let shiftY = -(relYs[0] + relYs[relYs.length - 1]) / 2;
         let maxChildLeftExt = Math.max(...childrenData.right.map(c => -c.left));
         childrenData.right.forEach((c, idx) => {
             let childNode = nodes.find(n => n.id === c.id);
-            childNode.relX = w/2 + (node.gaps.right * frSize) + maxChildLeftExt;
+            childNode.relX = w / 2 + (node.gaps.right * frSize) + maxChildLeftExt;
             childNode.relY = relYs[idx] + shiftY;
             bounds.right = Math.max(bounds.right, childNode.relX + c.right);
             bounds.left = Math.min(bounds.left, childNode.relX + c.left);
@@ -557,16 +635,16 @@ function calcTreeBounds(nodeId) {
     }
     if (childrenData.left.length > 0) {
         let relYs = [0];
-        for(let i=1; i<childrenData.left.length; i++) {
-            let prev = childrenData.left[i-1];
+        for (let i = 1; i < childrenData.left.length; i++) {
+            let prev = childrenData.left[i - 1];
             let curr = childrenData.left[i];
-            relYs.push(relYs[i-1] + prev.bottom + sGap - curr.top);
+            relYs.push(relYs[i - 1] + prev.bottom + sGap - curr.top);
         }
         let shiftY = -(relYs[0] + relYs[relYs.length - 1]) / 2;
         let maxChildRightExt = Math.max(...childrenData.left.map(c => c.right));
         childrenData.left.forEach((c, idx) => {
             let childNode = nodes.find(n => n.id === c.id);
-            childNode.relX = -w/2 - (node.gaps.left * frSize) - maxChildRightExt;
+            childNode.relX = -w / 2 - (node.gaps.left * frSize) - maxChildRightExt;
             childNode.relY = relYs[idx] + shiftY;
             bounds.right = Math.max(bounds.right, childNode.relX + c.right);
             bounds.left = Math.min(bounds.left, childNode.relX + c.left);
@@ -576,17 +654,17 @@ function calcTreeBounds(nodeId) {
     }
     if (childrenData.bottom.length > 0) {
         let relXs = [0];
-        for(let i=1; i<childrenData.bottom.length; i++) {
-            let prev = childrenData.bottom[i-1];
+        for (let i = 1; i < childrenData.bottom.length; i++) {
+            let prev = childrenData.bottom[i - 1];
             let curr = childrenData.bottom[i];
-            relXs.push(relXs[i-1] + prev.right + sGap - curr.left);
+            relXs.push(relXs[i - 1] + prev.right + sGap - curr.left);
         }
         let shiftX = -(relXs[0] + relXs[relXs.length - 1]) / 2;
         let maxChildTopExt = Math.max(...childrenData.bottom.map(c => -c.top));
         childrenData.bottom.forEach((c, idx) => {
             let childNode = nodes.find(n => n.id === c.id);
             childNode.relX = relXs[idx] + shiftX;
-            childNode.relY = h/2 + noteH + (node.gaps.bottom * frSize) + maxChildTopExt;
+            childNode.relY = h / 2 + noteH + (node.gaps.bottom * frSize) + maxChildTopExt;
             bounds.right = Math.max(bounds.right, childNode.relX + c.right);
             bounds.left = Math.min(bounds.left, childNode.relX + c.left);
             bounds.bottom = Math.max(bounds.bottom, childNode.relY + c.bottom);
@@ -595,17 +673,17 @@ function calcTreeBounds(nodeId) {
     }
     if (childrenData.top.length > 0) {
         let relXs = [0];
-        for(let i=1; i<childrenData.top.length; i++) {
-            let prev = childrenData.top[i-1];
+        for (let i = 1; i < childrenData.top.length; i++) {
+            let prev = childrenData.top[i - 1];
             let curr = childrenData.top[i];
-            relXs.push(relXs[i-1] + prev.right + sGap - curr.left);
+            relXs.push(relXs[i - 1] + prev.right + sGap - curr.left);
         }
         let shiftX = -(relXs[0] + relXs[relXs.length - 1]) / 2;
         let maxChildBottomExt = Math.max(...childrenData.top.map(c => c.bottom));
         childrenData.top.forEach((c, idx) => {
             let childNode = nodes.find(n => n.id === c.id);
             childNode.relX = relXs[idx] + shiftX;
-            childNode.relY = -h/2 - (node.gaps.top * frSize) - maxChildBottomExt;
+            childNode.relY = -h / 2 - (node.gaps.top * frSize) - maxChildBottomExt;
             bounds.right = Math.max(bounds.right, childNode.relX + c.right);
             bounds.left = Math.min(bounds.left, childNode.relX + c.left);
             bounds.bottom = Math.max(bounds.bottom, childNode.relY + c.bottom);
@@ -617,7 +695,7 @@ function calcTreeBounds(nodeId) {
 function applyAbsolutePos(nodeId, absCX, absCY) {
     let node = nodes.find(n => n.id === nodeId);
     node.x = absCX - (node.width * frSize) / 2;
-    node.y = absCY - (node.height * frSize) / 2; 
+    node.y = absCY - (node.height * frSize) / 2;
     edges.filter(e => e.from === nodeId).forEach(e => {
         let childNode = nodes.find(n => n.id === e.to);
         applyAbsolutePos(e.to, absCX + childNode.relX, absCY + childNode.relY);
@@ -625,7 +703,7 @@ function applyAbsolutePos(nodeId, absCX, absCY) {
 }
 function recalculatePositions() {
     let root = nodes.find(n => !edges.some(e => e.to === n.id));
-    if(!root) return;
+    if (!root) return;
     calcTreeBounds(root.id);
     let rootCX = root.x + (root.width * frSize) / 2;
     let rootCY = root.y + (root.height * frSize) / 2;
@@ -635,7 +713,7 @@ function updateContent(id, val) {
     const node = nodes.find(n => n.id === id);
     if (node) {
         node.content = val;
-        node.isCustomContent = true; 
+        node.isCustomContent = true;
     }
     requestAnimationFrame(() => autoResizeAllFonts());
 }
@@ -714,8 +792,8 @@ function liveUpdate() {
     let newBg = document.getElementById('set-bg').value;
     let newStroke = document.getElementById('set-stroke').value;
     let newColor = document.getElementById('set-color').value;
-    if (node.settings.bg.toLowerCase() !== newBg.toLowerCase() || 
-        node.settings.stroke.toLowerCase() !== newStroke.toLowerCase() || 
+    if (node.settings.bg.toLowerCase() !== newBg.toLowerCase() ||
+        node.settings.stroke.toLowerCase() !== newStroke.toLowerCase() ||
         node.settings.color.toLowerCase() !== newColor.toLowerCase()) {
         node.settings.isCustomColor = true;
     }
@@ -875,7 +953,7 @@ function autoResizeAllFonts() {
                 size--;
                 el.style.fontSize = size + 'px';
             }
-            n.calculatedFontSize = size; 
+            n.calculatedFontSize = size;
         }
         let noteEl = nodeEl.querySelector('.note-content');
         if (noteEl) {
@@ -887,7 +965,7 @@ function autoResizeAllFonts() {
                 size--;
                 noteEl.style.fontSize = size + 'px';
             }
-            n.calculatedNoteFontSize = size; 
+            n.calculatedNoteFontSize = size;
         }
     });
 }
@@ -916,7 +994,7 @@ function render() {
             div.dataset.note = node.note.content;
             div.dataset.showNote = String(node.note.show);
             div.dataset.settings = settingsStr;
-            div.dataset.incDir = String(forbiddenDir); 
+            div.dataset.incDir = String(forbiddenDir);
             div.dataset.size = sizeStr;
             div.dataset.lang = langStr;
             let wPx = node.width * frSize;
@@ -965,7 +1043,7 @@ function triggerSave() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(link.href); 
+    URL.revokeObjectURL(link.href);
     showAlert(t('saveSuccess'));
 }
 function initLoad() {
@@ -977,7 +1055,7 @@ function triggerLoad(fileContent) {
             let jsonString = "";
             const trimmedContent = fileContent.trim();
             if (trimmedContent.startsWith('%7B%22nodes%22')) {
-                
+
                 console.warn("Phát hiện file định dạng cũ. Tiến hành khôi phục dự phòng...");
                 jsonString = decodeURIComponent(trimmedContent);
             } else jsonString = decodeURIComponent(window.atob(trimmedContent));
@@ -999,13 +1077,13 @@ function triggerLoad(fileContent) {
             if (data.currentLang) changeLanguage(data.currentLang);
             document.getElementById('sys-fr').value = Math.round(frSize);
             document.documentElement.style.setProperty('--fr-size', frSize + 'px');
-            if(!isDarkMode) document.body.classList.add('light-mode');
+            if (!isDarkMode) document.body.classList.add('light-mode');
             else document.body.classList.remove('light-mode');
             let defColors = getDefaultColors();
             nodes.forEach(n => {
                 if (n.settings.isCustomColor === undefined) {
-                    if (n.settings.bg.toLowerCase() !== defColors.bg.toLowerCase() || 
-                        n.settings.stroke.toLowerCase() !== defColors.stroke.toLowerCase() || 
+                    if (n.settings.bg.toLowerCase() !== defColors.bg.toLowerCase() ||
+                        n.settings.stroke.toLowerCase() !== defColors.stroke.toLowerCase() ||
                         n.settings.color.toLowerCase() !== defColors.color.toLowerCase()) {
                         n.settings.isCustomColor = true;
                     } else n.settings.isCustomColor = false;
@@ -1022,7 +1100,7 @@ function triggerLoad(fileContent) {
 }
 function executeExport() {
     const marginFr = parseFloat(document.getElementById('export-margin').value) || 0;
-    const safeMargin = Math.max(marginFr * frSize, 20); 
+    const safeMargin = Math.max(marginFr * frSize, 20);
     if (nodes.length === 0) return;
     let originalTheme = isDarkMode;
     const toggleExportTheme = (toDark) => {
@@ -1070,7 +1148,7 @@ function executeExport() {
             ctx.fillStyle = n.settings.color;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            let maxTextWidth = w - 20; 
+            let maxTextWidth = w - 20;
             let lineHeight = mainFontSize * 1.2;
             wrapText(ctx, n.content, n.x + w / 2, n.y + h / 2, maxTextWidth, lineHeight);
             if (n.note.show) {
@@ -1081,7 +1159,7 @@ function executeExport() {
                 ctx.lineTo(n.x, n.y + h - 2 + noteH);
                 ctx.lineTo(n.x + w, n.y + h - 2 + noteH);
                 ctx.lineTo(n.x + w, n.y + h - 2);
-                ctx.stroke(); 
+                ctx.stroke();
                 ctx.beginPath();
                 ctx.setLineDash([3, 3]);
                 ctx.moveTo(n.x, n.y + h - 2);
@@ -1101,7 +1179,7 @@ function executeExport() {
         link.download = 'TreeDiagram_Export.png';
         link.href = expCanvas.toDataURL('image/png');
         link.click();
-    } finally {if (originalTheme) toggleExportTheme(true);}
+    } finally { if (originalTheme) toggleExportTheme(true); }
 }
 function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
     if (!text) return;

@@ -18,11 +18,13 @@
                 <div class="panel-group">
                     <h4 data-i18n="sysSettingsHeader">System Settings</h4>
                     
-                    <label data-i18n="languageLabel">Language / Ngôn ngữ / 语言:</label>
+                    <label data-i18n="languageLabel">Language / Ngôn ngữ / 语言 / Français / Русский:</label>
                     <select id="lang-select" onchange="changeLanguage(this.value)">
                         <option value="en">English</option>
                         <option value="vi">Tiếng Việt</option>
                         <option value="zh">中文 (Chinese)</option>
+                        <option value="fr">Français</option>
+                        <option value="ru">Русский</option>
                     </select>
                     
                     <button class="sys-btn" onmousedown="event.stopPropagation(); toggleTheme()" data-i18n="toggleTheme">Toggle Light/Dark Mode</button>
